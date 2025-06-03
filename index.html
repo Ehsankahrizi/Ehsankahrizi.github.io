@@ -130,3 +130,22 @@
 
 </body>
 </html>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swipers = document.querySelectorAll('.swiper');
+  swipers.forEach(swiperEl => {
+    new Swiper(swiperEl, {
+      loop: true,
+      pagination: {
+        el: swiperEl.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+      navigation: {
+        nextEl: swiperEl.querySelector('.swiper-button-next'),
+        prevEl: swiperEl.querySelector('.swiper-button-prev'),
+      },
+    });
+  });
+</script>
+
