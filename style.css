@@ -1,53 +1,61 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fefefe;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ehsan Kahrizi | Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-header {
-  background-color: #0077cc;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+  <header>
+    <h1>Ehsan Kahrizi</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-header h1 {
-  margin: 0;
-}
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my personal website. I am a PhD student interested in water resources, environmental modeling, and machine learning.</p>
+  </section>
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 10px 0 0 0;
-  display: flex;
-  justify-content: center;
-  background-color: #005fa3;
-}
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Machine Learning / Deep Learning (ML/DL)</li>
+      <li>Data Assimilation</li>
+      <li>Hydroinformatics</li>
+      <li>Anomaly Detection</li>
+      <li>Hydrology</li>
+      <li>Watershed Monitoring</li>
+      <li>Water Quality Modeling</li>
+      <li>Climate Change</li>
+    </ul>
+  </section>
 
-nav ul li {
-  margin: 0 15px;
-}
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>Title 1 – Journal Name – Year</li>
+      <li>Title 2 – Conference Name – Year</li>
+    </ul>
+  </section>
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon: descriptions of my research, tools, and collaborations.</p>
+  </section>
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ehsan.kahrizi@usu.edu">ehsan.kahrizi@usu.edu</a></p>
+    <p>GitHub: <a href="https://github.com/Ehsankahrizi" target="_blank">Ehsankahrizi</a></p>
+  </section>
 
-section {
-  padding: 30px;
-  max-width: 800px;
-  margin: auto;
-}
-
-section h2 {
-  color: #0077cc;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-}
+</body>
+</html>
