@@ -2,9 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site responsive on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ehsan Kahrizi | Personal Website</title>
-  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* === GLOBAL STYLES === */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    /* === HEADER STYLES === */
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px 60px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header p {
+      margin: 5px 0 15px 0;
+      font-size: 16px;
+    }
+    /* === NAVIGATION BAR === */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      background-color: #005fa3;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    /* === SECTION LAYOUT === */
+    section {
+      padding: 30px 60px;
+      margin: 0;
+    }
+    section h2 {
+      color: #0077cc;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    /* === UNORDERED & ORDERED LIST STYLES === */
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 6px;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    ol li {
+      margin-bottom: 10px;
+    }
+    /* === PROJECT GRID LAYOUT === */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      padding-top: 10px;
+    }
+    /* === INDIVIDUAL PROJECT BOXES === */
+    .project-item {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .project-item h3 {
+      margin-top: 0;
+      color: #005fa3;
+    }
+    /* === SWIPER STYLES === */
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      position: relative;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #0077cc;
+    }
+    .swiper-pagination-bullet-active {
+      background: #0077cc;
+    }
+    /* === MOBILE RESPONSIVENESS === */
+    @media (max-width: 600px) {
+      body, section {
+        padding: 20px;
+      }
+      header {
+        padding: 20px;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+      .swiper {
+        height: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -68,9 +200,10 @@
         <h3>Automated Quality Control of Environmental Sensor Data</h3>
         <p><em>Utah State University, USA (2023–Current)</em></p>
       </div>
+      
       <div class="project-item">
         <h3>Assessing the Potential of Integrating Hydrological Modelling Outputs with In-situ Sensor Datasets to Improve Anomaly Detection of Streamflow Data</h3>
-      
+        
         <!-- Swiper image slider -->
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -87,19 +220,15 @@
               <img src="https://ehsankahrizi.github.io/13.png" alt="Observed vs Simulated Hydrograph">
             </div>
           </div>
-      
+          
           <!-- Navigation + Pagination -->
           <div class="swiper-pagination"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-      
+        
         <p><em>Utah State University, USA (2024)</em></p>
         <p>This project evaluates the integration of hydrological modeling outputs with in-situ sensor datasets from the Logan River Observatory to enhance anomaly detection in streamflow records. Using the Advanced Terrestrial Simulator (ATS), a detailed simulation of the Franklin sub-watershed was conducted, capturing key seasonal flow patterns. The results demonstrate that hydrologic simulations can help identify sensor-induced anomalies, validate observed streamflow, and fill data gaps. This approach shows strong potential for improving the quality control of environmental sensor networks and supporting more reliable hydrological forecasting and watershed management.</p>
-      </div>
-
-        <p><em>Utah State University, USA (2024)</em></p>
-        <p>This project evaluates the integration of hydrological modeling outputs with in-situ sensor datasets from the Logan River Observatory to enhance anomaly detection in streamflow records. Using the Advanced Terrestrial Simulator (ATS), a detailed simulation of the Franklin sub-watershed was conducted, capturing key seasonal flow patterns. Despite some limitations in model accuracy and convergence, the results demonstrated that hydrologic simulations can help identify sensor-induced anomalies, validate observed streamflow, and fill data gaps. This approach shows strong potential for improving the quality control of environmental sensor networks and supporting more reliable hydrological forecasting and watershed management.</p>
       </div>
       
       <div class="project-item">
@@ -108,24 +237,26 @@
         <p><em>Tarbiat Modares University, Iran (2022)</em></p>
         <p>This project aims to evaluate the accuracy and applicability of the GLDAS global dataset by comparing it with ground-based meteorological station data across the Urmia Lake Basin in Iran. Key variables such as wind speed, temperature, pressure, humidity, and precipitation were analyzed across 17 in situ stations. The results indicate spatial and temporal inconsistencies in GLDAS outputs, often underestimating or overestimating values depending on station location and variable type. The project highlights the need for local calibration of global datasets to improve the reliability of hydrological and climate modeling in semi-arid regions like Urmia.</p>
       </div>
+      
       <div class="project-item">
         <h3>Investigation of Air Bubble Curtain to Prevent Seawater Intrusion</h3>
         <img src="https://ehsankahrizi.github.io/swi.png" alt="Air bubble curtain experiment" style="width:100%; border-radius: 8px; margin-bottom: 10px;">
         <p><em>Tarbiat Modares University, Iran (2019)</em></p>
-        <p>
-          The seawater intrusion (SWI) into rivers can lead to many negative consequences, especially for agriculture and aquatic ecosystems in upstream areas. One promising method to mitigate SWI is the use of air bubble curtains (ABCs). This study investigates the optimal location and airflow requirements for ABCs under varying flow and salinity conditions. Experiments revealed that as the seawater-to-freshwater density ratio increased from 1.006 to 1.010, the tip velocity of the saline wedge and airflow ratios for ABCs increased by 60%, 58%, and 70% respectively. Results also showed that when the Froude number exceeds 0.031, SWI is minimally affected by density. Furthermore, placing the ABC closer to the downstream region of the river requires a higher airflow rate, and the optimal airflow needed is strongly dependent on seawater density. Regression equations were developed to predict SWI parameters based on flow characteristics, offering practical guidance for ABC deployment in real-world conditions.
-        </p>
+        <p>The seawater intrusion (SWI) into rivers can lead to many negative consequences, especially for agriculture and aquatic ecosystems in upstream areas. One promising method to mitigate SWI is the use of air bubble curtains (ABCs). This study investigates the optimal location and airflow requirements for ABCs under varying flow and salinity conditions. Experiments revealed that as the seawater-to-freshwater density ratio increased from 1.006 to 1.010, the tip velocity of the saline wedge and airflow ratios for ABCs increased by 60%, 58%, and 70% respectively. Results also showed that when the Froude number exceeds 0.031, SWI is minimally affected by density. Furthermore, placing the ABC closer to the downstream region of the river requires a higher airflow rate, and the optimal airflow needed is strongly dependent on seawater density. Regression equations were developed to predict SWI parameters based on flow characteristics, offering practical guidance for ABC deployment in real-world conditions.</p>
       </div>
+      
       <div class="project-item">
         <h3>Baffle-Enhanced Scour Mitigation in Piano Key Weirs</h3>
         <img src="https://ehsankahrizi.github.io/MLP.png" alt="Neural network model for scour mitigation prediction" style="width:100%; border-radius: 8px; margin-bottom: 10px;">
         <p><em>Tarbiat Modares University, Iran (2023)</em></p>
         <p>This project presents experimental and machine learning-based investigations to reduce scour downstream of rectangular and trapezoidal Piano Key Weirs (PKWs) using baffles. The inclusion of baffles significantly improved energy dissipation (by 18–22%) and reduced scour depth (by 11–14%). Machine learning models—MLP, XGBoost, and SVR—were developed to predict scour parameters, with the MLP model achieving the highest accuracy (R² = 0.988). The study also introduced new empirical equations for predicting scour, confirming the potential of baffles and data-driven modeling to enhance weir performance and structural stability.</p>
       </div>
+      
       <div class="project-item">
         <h3>Numerical Simulation of Aeration Impact in Piano Key Weirs</h3>
         <p><em>Tarbiat Modares University, Iran (2019)</em></p>
       </div>
+      
       <div class="project-item">
         <h3>Network Climate Action</h3>
         <p><em>Cornell University, USA (2020)</em></p>
@@ -140,24 +271,23 @@
     <p>GitHub: <a href="https://github.com/Ehsankahrizi" target="_blank">Ehsankahrizi</a></p>
   </section>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swipers = document.querySelectorAll('.swiper');
+    swipers.forEach(swiperEl => {
+      new Swiper(swiperEl, {
+        loop: true,
+        pagination: {
+          el: swiperEl.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        navigation: {
+          nextEl: swiperEl.querySelector('.swiper-button-next'),
+          prevEl: swiperEl.querySelector('.swiper-button-prev'),
+        },
+      });
+    });
+  </script>
+
 </body>
 </html>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  const swipers = document.querySelectorAll('.swiper');
-  swipers.forEach(swiperEl => {
-    new Swiper(swiperEl, {
-      loop: true,
-      pagination: {
-        el: swiperEl.querySelector('.swiper-pagination'),
-        clickable: true,
-      },
-      navigation: {
-        nextEl: swiperEl.querySelector('.swiper-button-next'),
-        prevEl: swiperEl.querySelector('.swiper-button-prev'),
-      },
-    });
-  });
-</script>
-
