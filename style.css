@@ -17,6 +17,11 @@ header h1 {
   margin: 0;
 }
 
+header p {
+  margin: 5px 0 15px 0;
+  font-size: 16px;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
