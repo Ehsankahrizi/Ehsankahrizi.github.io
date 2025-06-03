@@ -59,3 +59,11 @@ ul {
 ul li {
   margin-bottom: 6px;
 }
+
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
