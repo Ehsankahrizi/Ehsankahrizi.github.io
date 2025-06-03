@@ -1,63 +1,63 @@
 /* === GLOBAL STYLES === */
 body {
-  font-family: Arial, sans-serif;       /* Set default font */
-  background-color: #fefefe;            /* Light background */
-  margin: 0;                            /* Remove default margin */
-  padding: 0;                           /* Remove default padding */
-  color: #333;                          /* Text color */
+  font-family: Arial, sans-serif;
+  background-color: #fefefe;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
 /* === HEADER STYLES === */
 header {
-  background-color: #0077cc;            /* Blue background */
-  color: white;                         /* White text */
-  padding: 20px 60px;                   /* Space around content */
-  text-align: center;                   /* Center text (desktop) */
+  background-color: #0077cc;
+  color: white;
+  padding: 20px 60px;
+  text-align: center;
 }
 
 header h1 {
-  margin: 0;                            /* Remove default h1 margin */
+  margin: 0;
 }
 
 header p {
-  margin: 5px 0 15px 0;                 /* Spacing around subtitle */
-  font-size: 16px;                      /* Slightly smaller text */
+  margin: 5px 0 15px 0;
+  font-size: 16px;
 }
 
 /* === NAVIGATION BAR === */
 nav ul {
-  list-style-type: none;                /* Remove bullets */
+  list-style-type: none;
   padding: 0;
   margin: 10px 0 0 0;
-  display: flex;                        /* Flex row layout */
-  justify-content: center;             /* Center nav links */
-  background-color: #005fa3;           /* Darker blue nav bar */
-  flex-wrap: wrap;                     /* Wrap on smaller screens */
+  display: flex;
+  justify-content: center;
+  background-color: #005fa3;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  margin: 0 15px;                       /* Spacing between links */
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: white;
-  text-decoration: none;               /* Remove underline */
+  text-decoration: none;
   font-weight: bold;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;          /* Underline on hover */
+  text-decoration: underline;
 }
 
 /* === SECTION LAYOUT === */
 section {
-  padding: 30px 60px;                  /* Full-width padding */
-  margin: 0;                           /* No auto-centering */
+  padding: 30px 60px;
+  margin: 0;
 }
 
 section h2 {
   color: #0077cc;
-  border-bottom: 1px solid #ccc;       /* Underline for section titles */
+  border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
 }
 
@@ -81,8 +81,8 @@ ol li {
 /* === PROJECT GRID LAYOUT === */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
-  gap: 20px;                            /* Space between grid items */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
   padding-top: 10px;
 }
 
@@ -92,7 +92,8 @@ ol li {
   border-radius: 8px;
   padding: 15px;
   background-color: #f9f9f9;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.1); /* Light shadow */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent overflow from Swiper buttons */
 }
 
 .project-item h3 {
@@ -100,10 +101,36 @@ ol li {
   color: #005fa3;
 }
 
+/* === SWIPER STYLES === */
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Swiper navigation & pagination improvements */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #0077cc;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0077cc;
+}
+
 /* === MOBILE RESPONSIVENESS === */
 @media (max-width: 600px) {
   body, section {
-    padding: 20px;                     /* Reduce padding on small screens */
+    padding: 20px;
   }
 
   header {
@@ -112,7 +139,7 @@ ol li {
   }
 
   nav ul {
-    flex-direction: column;           /* Stack nav items vertically */
+    flex-direction: column;
     align-items: center;
   }
 
@@ -121,20 +148,11 @@ ol li {
   }
 
   .project-grid {
-    grid-template-columns: 1fr;       /* Single column grid */
+    grid-template-columns: 1fr;
   }
-}
-.swiper {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
 
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  .swiper {
+    height: 250px; /* Slightly shorter for mobile */
+  }
 }
 
