@@ -1,62 +1,67 @@
+/* === GLOBAL STYLES === */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fefefe;
-  margin: 0;
-  padding: 0;
-  color: #333;
+  font-family: Arial, sans-serif;       /* Set default font */
+  background-color: #fefefe;            /* Light background */
+  margin: 0;                            /* Remove default margin */
+  padding: 0;                           /* Remove default padding */
+  color: #333;                          /* Text color */
 }
 
+/* === HEADER STYLES === */
 header {
-  background-color: #0077cc;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  background-color: #0077cc;            /* Blue background */
+  color: white;                         /* White text */
+  padding: 20px 60px;                   /* Space around content */
+  text-align: center;                   /* Center text (desktop) */
 }
 
 header h1 {
-  margin: 0;
+  margin: 0;                            /* Remove default h1 margin */
 }
 
 header p {
-  margin: 5px 0 15px 0;
-  font-size: 16px;
+  margin: 5px 0 15px 0;                 /* Spacing around subtitle */
+  font-size: 16px;                      /* Slightly smaller text */
 }
 
+/* === NAVIGATION BAR === */
 nav ul {
-  list-style-type: none;
+  list-style-type: none;                /* Remove bullets */
   padding: 0;
   margin: 10px 0 0 0;
-  display: flex;
-  justify-content: center;
-  background-color: #005fa3;
+  display: flex;                        /* Flex row layout */
+  justify-content: center;             /* Center nav links */
+  background-color: #005fa3;           /* Darker blue nav bar */
+  flex-wrap: wrap;                     /* Wrap on smaller screens */
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 15px;                       /* Spacing between links */
 }
 
 nav ul li a {
   color: white;
-  text-decoration: none;
+  text-decoration: none;               /* Remove underline */
   font-weight: bold;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline;          /* Underline on hover */
 }
 
+/* === SECTION LAYOUT === */
 section {
-  padding: 30px;
-  max-width: 800px;
-  margin: auto;
+  padding: 30px 60px;                  /* Full-width padding */
+  margin: 0;                           /* No auto-centering */
 }
 
 section h2 {
   color: #0077cc;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;       /* Underline for section titles */
   padding-bottom: 5px;
 }
 
+/* === UNORDERED & ORDERED LIST STYLES === */
 ul {
   padding-left: 20px;
 }
@@ -72,19 +77,22 @@ ol {
 ol li {
   margin-bottom: 10px;
 }
+
+/* === PROJECT GRID LAYOUT === */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
+  gap: 20px;                            /* Space between grid items */
   padding-top: 10px;
 }
 
+/* === INDIVIDUAL PROJECT BOXES === */
 .project-item {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px;
   background-color: #f9f9f9;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1); /* Light shadow */
 }
 
 .project-item h3 {
@@ -92,3 +100,27 @@ ol li {
   color: #005fa3;
 }
 
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 600px) {
+  body, section {
+    padding: 20px;                     /* Reduce padding on small screens */
+  }
+
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;           /* Stack nav items vertically */
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;       /* Single column grid */
+  }
+}
