@@ -38,16 +38,20 @@
     }
 
     /* === footer section =================================================================================================== */
-
-  
     .site-footer{
-      text-align:center;
+      display:flex;                 /* centers the block itself */
+      justify-content:center;
       padding:12px 0;
-      font-size:0.95rem;
-      color:#666;
       border-top:1px solid #eee;
+      color:#666;
+      font-size:0.95rem;
+    }    
+    .site-footer p{
+      margin:0;
+      max-width:60ch;               /* keeps lines readable if it wraps */
+      text-align:justify;           /* justify multi-line text */
+      text-align-last:center;       /* center the last/only line */
     }
-
     
     /* === NAVIGATION BAR =================================================================================================== */
     nav ul {
